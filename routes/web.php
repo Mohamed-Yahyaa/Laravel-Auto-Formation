@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\Controller;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route ::get ('/display',[Controller::class,"display"]);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-
-// route::get('/index',[Controller::class,"index"]);
+require __DIR__.'/auth.php';
