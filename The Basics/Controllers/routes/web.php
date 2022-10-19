@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TestController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,14 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/index',function () {
-    return view('index');
+Route::get('/', function () {
+    return view('welcome');
 });
 
+Route::get('/index',[TestController::class,'afficher']);
 
 
+//exmple 2
+Route::get('/page',[TestController::class,'index']);
 
+//Contrôller à simple action
+// Route::get('/invokable',invokeController::class);
