@@ -21,4 +21,9 @@ class promotions extends Model
    public function HasManyapprenants(){
       return $this-> hasMany(apprenants::class);
    }
+
+   
+   public function apprenants(){
+      return $this->belongsToMany(apprenants::class);
+   }
 }

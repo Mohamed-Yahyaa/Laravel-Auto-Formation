@@ -18,8 +18,12 @@ class PromotionsController extends Controller
     // One To Many
 
     public function index2(){
-        $data = promotions::find(1)->HasManyapprenants;
-       
+        $data = promotions::find(2)->HasManyapprenants;
+        return $data;
+    }
+
+    public function index3(){
+        $data = promotions::find(3)->apprenants;
         return $data;
     }
 }

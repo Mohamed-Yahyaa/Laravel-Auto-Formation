@@ -9,9 +9,9 @@ use Illuminate\Database\Eloquent\Model;
 class Apprenants extends Model
 {
 
-    // protected $table='apprenants';
+    protected $table='apprenants';
 
-    // public function promotions(){
-    //     return $this->belongsTo(promotions::class);
-    // }
+    public function promotions(){
+        return $this->belogsToMany(promotions::class);
+    }
 }

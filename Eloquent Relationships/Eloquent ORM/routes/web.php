@@ -23,4 +23,6 @@ Route::get('index',[PromotionsController::class,"index"]);
 
 Route::get('index2',[PromotionsController::class,"index2"]);
 
+Route::get('index3',[PromotionsController::class,"index3"]);
+
 
