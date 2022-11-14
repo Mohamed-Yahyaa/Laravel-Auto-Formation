@@ -22,6 +22,7 @@ class PromotionsController extends Controller
         return $data;
     }
 
+    // Many To Many
     public function index3(){
         $data = promotions::find(3)->apprenants;
         return $data;
